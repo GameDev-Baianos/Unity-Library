@@ -11,12 +11,21 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        //Movement input (x and y)
         movementInput.x = Input.GetAxisRaw("Horizontal");
         movementInput.y = Input.GetAxisRaw("Vertical");
 
+        //Walking animations
         animator.SetFloat("Horizontal", movementInput.x);
-        animator.SetFloat("Vertical", movementInput.y);
+        animator.SetFloat("Vertical", movementInput.y); 
         animator.SetFloat("Speed", movementInput.sqrMagnitude);
+
+        //Idle animations
+        if (movementInput.x == 1 || movementInput.x == -1 || movementInput.y == 1 || movementInput.y == -1)
+        {
+            animator.SetFloat("lastHori", movementInput.x);
+            animator.SetFloat("lastVert", movementInput.y);
+        }
     }
 
     void FixedUpdate()
