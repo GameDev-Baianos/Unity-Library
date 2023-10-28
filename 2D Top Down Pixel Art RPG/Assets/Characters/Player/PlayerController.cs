@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 1f;
-
     public Rigidbody2D rb;
     public Animator animator;
 
@@ -11,20 +10,28 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        //Movement input (x and y)
+        //Player movement input
         movementInput.x = Input.GetAxisRaw("Horizontal");
         movementInput.y = Input.GetAxisRaw("Vertical");
+
+        //Atacking animations
+        if(Input.GetMouseButtonDown(0))
+            animator.SetBool("isAttacking", true);
+        else
+            animator.SetBool("isAttacking", false);
 
         //Walking animations
         animator.SetFloat("Horizontal", movementInput.x);
         animator.SetFloat("Vertical", movementInput.y); 
         animator.SetFloat("Speed", movementInput.sqrMagnitude);
 
-        //Idle animations
+        //Idle and Attack animations
         if (movementInput.x == 1 || movementInput.x == -1 || movementInput.y == 1 || movementInput.y == -1)
         {
             animator.SetFloat("lastHori", movementInput.x);
             animator.SetFloat("lastVert", movementInput.y);
+            animator.SetFloat("attackHori", movementInput.x);
+            animator.SetFloat("attackVert", movementInput.y);
         }
     }
 
