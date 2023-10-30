@@ -14,12 +14,6 @@ public class PlayerController : MonoBehaviour
         movementInput.x = Input.GetAxisRaw("Horizontal");
         movementInput.y = Input.GetAxisRaw("Vertical");
 
-        //Atacking animations
-        if(Input.GetMouseButtonDown(0))
-            animator.SetBool("isAttacking", true);
-        else
-            animator.SetBool("isAttacking", false);
-
         //Walking animations
         animator.SetFloat("Horizontal", movementInput.x);
         animator.SetFloat("Vertical", movementInput.y); 
