@@ -44,6 +44,12 @@ TagManager:
   - name: Floor
     uniqueID: 1447195849
     locked: 0
+  - name: Columns and walls
+    uniqueID: 1302096021
+    locked: 0
+  - name: Interactible
+    uniqueID: 163479069
+    locked: 0
   - name: Characters
     uniqueID: 1623455361
     locked: 0
