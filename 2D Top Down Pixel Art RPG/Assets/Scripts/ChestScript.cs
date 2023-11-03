@@ -2,10 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChestScript : ColliderScript
+public class ChestScript : CollectableScript
 {
-    protected override void OnCollide(Collider2D coll)
+    public Sprite emptyChest;
+    public int pesosAmount = 5;
+    protected override void OnCollect()
     {
-        Debug.Log("Grant pesos");
+        if(!collected)
+        {
+            base.OnCollect();
+            GetComponent<SpriteRenderer>().sprite = emptyChest;
+            GameManager.instance.pesos += pesosAmount;
+            Debug.Log("Grant " + pesosAmount + " pesos!");
+        }
     }
 }

@@ -81,16 +81,12 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D ground)
     {
         if(ground.gameObject.layer == 8)
-        {
             isGrounded = true;
-        }
     }
     void OnCollisionExit2D(Collision2D grund) 
     {
         if(grund.gameObject.layer == 8)
-        {
-        isGrounded = false;
-        }
+            isGrounded = false;
     }
         
     private IEnumerator Dash()
@@ -98,17 +94,18 @@ public class PlayerController : MonoBehaviour
         // boa sorte
         canDash = false;
         isDashing = true;
-        float gravidadePadrão = rb.gravityScale;
+
+        float gravidadePadrao = rb.gravityScale;
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * dashForce, 0f);
         tr.emitting = true;
         yield return new WaitForSeconds(dashTime);
+
         rb.velocity = new Vector2(0f, 0f);
         tr.emitting = false;
-        rb.gravityScale = gravidadePadrão;
+        rb.gravityScale = gravidadePadrao;
         isDashing = false;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
-
 }
