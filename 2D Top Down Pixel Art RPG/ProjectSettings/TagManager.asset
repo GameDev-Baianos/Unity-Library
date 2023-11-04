@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -52,4 +53,7 @@ TagManager:
     locked: 0
   - name: Characters
     uniqueID: 1623455361
+    locked: 0
+  - name: Weapon
+    uniqueID: 2575373093
     locked: 0

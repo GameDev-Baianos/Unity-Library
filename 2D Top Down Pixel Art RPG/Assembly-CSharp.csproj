@@ -56,12 +56,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+    <Compile Include="Assets\Scripts\WeaponScript.cs" />
     <Compile Include="Assets\Scripts\ChestScript.cs" />
+    <Compile Include="Assets\Scripts\FigtherScript.cs" />
     <Compile Include="Assets\Scripts\CollectableScript.cs" />
+    <Compile Include="Assets\Scripts\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\FloatingTextManager.cs" />
+    <Compile Include="Assets\Scripts\DamageScript.cs" />
     <Compile Include="Assets\Scripts\PortalScript.cs" />
     <Compile Include="Assets\Scripts\ColliderScript.cs" />
+    <Compile Include="Assets\Scripts\MoverScript.cs" />
     <Compile Include="Assets\Scripts\FloatingTextScript.cs" />
   </ItemGroup>
   <ItemGroup>
