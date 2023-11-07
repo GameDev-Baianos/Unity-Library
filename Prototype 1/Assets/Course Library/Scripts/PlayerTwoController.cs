@@ -1,7 +1,7 @@
 using Cinemachine;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerTwoController : MonoBehaviour
 {
     public CinemachineVirtualCamera firstPerson;
     public CinemachineVirtualCamera thirdPerson;
@@ -22,16 +22,15 @@ public class PlayerController : MonoBehaviour
         CameraSwitcher.Unregister(thirdPerson);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.W))
+        if(Input.GetKey(KeyCode.UpArrow))
             transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.DownArrow))
             transform.Translate(Vector3.back * Time.deltaTime * moveSpeed);
-        if(Input.GetKey(KeyCode.A))
+        if(Input.GetKey(KeyCode.LeftArrow))
             transform.Rotate(Vector3.down, Time.deltaTime * turnSpeed);
-        if(Input.GetKey(KeyCode.D))
+        if(Input.GetKey(KeyCode.RightArrow))
             transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed);
 
         cameraSwitch();
@@ -39,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
     void cameraSwitch()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.RightControl))
         {
             if(CameraSwitcher.IsActiveCamera(thirdPerson))
             {
