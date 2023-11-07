@@ -1,0 +1,14 @@
+C:\Users\arthu\source\repos\Enumerations\Enumerations\obj\Debug\net6.0\Enumerations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arthu\source\repos\Enumerations\Enumerations\obj\Debug\net6.0\Enumerations.AssemblyInfoInputs.cache
+C:\Users\arthu\source\repos\Enumerations\Enumerations\obj\Debug\net6.0\Enumerations.AssemblyInfo.cs
+C:\Users\arthu\source\repos\Enumerations\Enumerations\obj\Debug\net6.0\Enumerations.csproj.CoreCompileInputs.cache
+C:\Users\arthu\source\repos\Enumerations\Enumerations\bin\Debug\net6.0\Enumerations.exe
+C:\Users\arthu\source\repos\Enumerations\Enumerations\bin\Debug\net6.0\Enumerations.deps.json
+C:\Users\arthu\source\repos\Enumerations\Enumerations\bin\Debug\net6.0\Enumerations.runtimeconfig.json
+C:\Users\arthu\source\repos\Enumerations\Enumerations\bin\Debug\net6.0\Enumerations.dll
+C:\Users\arthu\source\repos\Enumerations\Enumerations\bin\Debug\net6.0\Enumerations.pdb
+C:\Users\arthu\source\repos\Enumerations\Enumerations\obj\Debug\net6.0\Enumerations.dll
+C:\Users\arthu\source\repos\Enumerations\Enumerations\obj\Debug\net6.0\refint\Enumerations.dll
+C:\Users\arthu\source\repos\Enumerations\Enumerations\obj\Debug\net6.0\Enumerations.pdb
+C:\Users\arthu\source\repos\Enumerations\Enumerations\obj\Debug\net6.0\Enumerations.genruntimeconfig.cache
+C:\Users\arthu\source\repos\Enumerations\Enumerations\obj\Debug\net6.0\ref\Enumerations.dll

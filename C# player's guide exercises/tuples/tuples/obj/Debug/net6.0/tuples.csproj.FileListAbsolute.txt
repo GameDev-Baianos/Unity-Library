@@ -1,0 +1,14 @@
+C:\Users\arthu\source\repos\tuples\tuples\bin\Debug\net6.0\tuples.exe
+C:\Users\arthu\source\repos\tuples\tuples\bin\Debug\net6.0\tuples.deps.json
+C:\Users\arthu\source\repos\tuples\tuples\bin\Debug\net6.0\tuples.runtimeconfig.json
+C:\Users\arthu\source\repos\tuples\tuples\bin\Debug\net6.0\tuples.dll
+C:\Users\arthu\source\repos\tuples\tuples\bin\Debug\net6.0\tuples.pdb
+C:\Users\arthu\source\repos\tuples\tuples\obj\Debug\net6.0\tuples.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arthu\source\repos\tuples\tuples\obj\Debug\net6.0\tuples.AssemblyInfoInputs.cache
+C:\Users\arthu\source\repos\tuples\tuples\obj\Debug\net6.0\tuples.AssemblyInfo.cs
+C:\Users\arthu\source\repos\tuples\tuples\obj\Debug\net6.0\tuples.csproj.CoreCompileInputs.cache
+C:\Users\arthu\source\repos\tuples\tuples\obj\Debug\net6.0\tuples.dll
+C:\Users\arthu\source\repos\tuples\tuples\obj\Debug\net6.0\refint\tuples.dll
+C:\Users\arthu\source\repos\tuples\tuples\obj\Debug\net6.0\tuples.pdb
+C:\Users\arthu\source\repos\tuples\tuples\obj\Debug\net6.0\tuples.genruntimeconfig.cache
+C:\Users\arthu\source\repos\tuples\tuples\obj\Debug\net6.0\ref\tuples.dll
