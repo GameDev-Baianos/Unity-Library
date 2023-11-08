@@ -1,13 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
+    private GameManager gameManager;
+
+    void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
+
     void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+        if (other.CompareTag("Player"))
+        {
+            gameManager.AddLives(-1);
+            Destroy(gameObject);
+        }
+        else 
+        {
+            gameManager.AddScore(5);
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
     }
 }
