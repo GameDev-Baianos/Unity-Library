@@ -3262,8 +3262,8 @@ GameObject:
   - component: {fileID: 1060394731}
   - component: {fileID: 1060394730}
   - component: {fileID: 1060394729}
-  - component: {fileID: 1060394734}
   - component: {fileID: 1060394735}
+  - component: {fileID: 1060394736}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3303,7 +3303,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.012236118, y: 0.052529216}
+  m_Offset: {x: 0.05224794, y: -0.096735835}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3314,7 +3314,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.69241595, y: 0.9623413}
+  m_Size: {x: 1.2339035, y: 1.2608714}
   m_EdgeRadius: 0
 --- !u!50 &1060394730
 Rigidbody2D:
@@ -3339,9 +3339,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &1060394731
 Animator:
@@ -3432,8 +3432,27 @@ Transform:
   - {fileID: 49521921}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1060394734
-CircleCollider2D:
+--- !u!114 &1060394735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060394728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d78f281b425cb46bb8d5ac78b9a552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGrounded: 0
+  feetPosition: {fileID: 49521921}
+  sizeCapsule: {x: 0.79, y: 0.065}
+  angleCapsule: 50
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!70 &1060394736
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3464,27 +3483,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010603309, y: -0.699817}
-  serializedVersion: 2
-  m_Radius: 0.3107862
---- !u!114 &1060394735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060394728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62d78f281b425cb46bb8d5ac78b9a552, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGrounded: 0
-  feetPosition: {fileID: 49521921}
-  sizeRadius: 0.115
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
+  m_Offset: {x: 0.0055419253, y: -0.9671398}
+  m_Size: {x: 0.79177886, y: 0.06572784}
+  m_Direction: 1
 --- !u!1 &1521958954
 GameObject:
   m_ObjectHideFlags: 0

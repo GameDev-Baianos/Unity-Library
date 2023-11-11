@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -13,7 +11,8 @@ public class PlayerController : MonoBehaviour
     // Is Grounged Variables
     public bool isGrounded;
     public Transform feetPosition;
-    public float sizeRadius;
+    [SerializeField] private Vector2 sizeCapsule;
+    [SerializeField] private float angleCapsule;
     public LayerMask whatIsGround;
 
     Rigidbody2D rb;
@@ -25,12 +24,14 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
+        sizeCapsule = new Vector2(0.79f, 0.065f);
     }
 
     void Update()
     {   
         // identify ground
-        isGrounded = Physics2D.OverlapCircle(feetPosition.position, sizeRadius, whatIsGround);
+        isGrounded = Physics2D.OverlapCapsule(feetPosition.position, sizeCapsule, CapsuleDirection2D.Horizontal, angleCapsule ,whatIsGround);
 
         moveX = Input.GetAxisRaw("Horizontal");
         if(Input.GetButtonDown("Jump") && isGrounded)
@@ -70,6 +71,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(1, 0, 0, 0.5f);
+        Gizmos.DrawCube(feetPosition.position, sizeCapsule);
+    }
+
     void FixedUpdate()
     {
         // Character Movement
@@ -78,7 +85,7 @@ public class PlayerController : MonoBehaviour
         // Character jump
         if(jump)
         {
-            rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            rb.velocity = Vector2.up * jumpForce;
             jump = false;
         }
     }
